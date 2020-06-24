@@ -1,0 +1,234 @@
+.center {
+  text-align: center;
+}
+
+.controls {
+  position: relative;
+  top: 40rem;
+  width: 80%;
+  height: 14rem;
+  display: inline-block;
+}
+
+.button {
+  border-radius: 6rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: $color-gold;
+  border: 2px solid $color-black;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    background-color: yellow;
+  }
+
+  &-container {
+    display: grid;
+    position: relative;
+    top: -45rem;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5rem;
+    height: 20rem;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 2rem;
+  }
+
+  &-item1 {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  &-item2 {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+  }
+
+  &-item3 {
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+  }
+}
+
+.playgrid {
+  display: grid;
+  position: relative;
+  top: -40rem;
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  //background-color: red;
+  height: 25rem;
+  align-items: center;
+}
+
+.playgrid:nth-child(1) {
+  margin-top: -15rem;
+}
+
+.playgrid:nth-child(2) {
+  margin-top: 6rem;
+}
+
+.playerScore {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  position: relative;
+  left: -2rem;
+  font-size: 1.6rem;
+  top: 5rem;
+  grid-row: 1/1;
+  grid-column: 2/2;
+  border: solid 2px white;
+  border-radius: 10rem;
+  padding: 0 2rem;
+  background-color: #2c7da4;
+}
+.content {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  position: relative;
+  left: -7rem;
+  font-size: 1.6rem;
+  top: 4.5rem;
+  border: solid 2px white;
+  grid-row: 2/2;
+  grid-column: 2/2;
+
+  border-radius: 10rem;
+  padding: 0.3rem 2rem;
+  background-color: #2c7da4;
+}
+
+.dealerScore {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  border: solid 2px white;
+  position: relative;
+  left: -2rem;
+  margin-bottom: -8rem;
+  top: 1rem;
+  font-size: 1.6rem;
+  grid-row: 1/1;
+  grid-column: 2/2;
+  border-radius: 10rem;
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.item-0 {
+  position: relative;
+  left: 11rem;
+  //background-color: yellow;
+  text-align: right;
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+
+.item-1 {
+  //background-color: green;
+  text-align: left;
+  position: relative;
+  left: -2rem;
+  grid-row: 2/2;
+  grid-column: 2/2;
+}
+
+.item-2 {
+  left: 1rem;
+  grid-row: 2/2;
+  grid-column: 2/2;
+  position: relative;
+  //background-color: purple;
+  text-align: left;
+}
+
+.item-3 {
+  grid-row: 2/2;
+  grid-column: 2/2;
+  //background-color: black;
+  text-align: left;
+  position: relative;
+  left: 4rem;
+}
+
+.item-4 {
+  grid-row: 2/2;
+  grid-column: 2/2;
+  position: relative;
+  left: 7rem;
+  //background-color: yellow;
+  text-align: left;
+}
+
+.item-5 {
+  //background-color: green;
+  text-align: left;
+  position: relative;
+  left: 10rem;
+  grid-row: 2/2;
+  grid-column: 2/2;
+}
+
+.item-6 {
+  grid-row: 2/2;
+  grid-column: 2/2;
+  position: relative;
+  //background-color: purple;
+  text-align: left;
+  left: 13rem;
+}
+
+.item-7 {
+  grid-row: 2/2;
+  grid-column: 2/2;
+  //background-color: black;
+  text-align: left;
+  position: relative;
+  left: 16rem;
+}
+
+.item-8 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  position: relative;
+  left: 8rem;
+  //background-color: yellow;
+  text-align: right;
+  z-index: -1;
+}
+
+.item-9 {
+  //background-color: green;
+  text-align: right;
+  position: relative;
+  left: 5rem;
+  grid-row: 2/2;
+  grid-column: 1/1;
+  z-index: -2;
+}
+
+.item-10 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  position: relative;
+  //background-color: purple;
+  text-align: right;
+  left: 2rem;
+  z-index: -3;
+}
+
+.please {
+  position: relative;
+  top: -17rem;
+  left: 1rem;
+}

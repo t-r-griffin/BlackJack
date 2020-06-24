@@ -1,0 +1,122 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.instant {
+  animation: appear 4s linear;
+}
+.cardStyle {
+  animation: dealing 0.75s linear;
+}
+
+.cardStyle2 {
+  animation: dealing2 0.75s linear;
+}
+
+.fadeIn2 {
+  animation: show 5s linear;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*animate the cards from left to ending position while spinning*/
+@keyframes dealing {
+  0% {
+    transform: translate(35rem, 0px);
+    opacity: 0;
+    top: -1rem;
+  }
+  45% {
+    opacity: 0;
+    top: -1rem;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    //transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes dealing2 {
+  0% {
+    transform: translate(35rem, -1rem);
+    opacity: 1;
+    top: -1rem;
+  }
+  45% {
+    opacity: 1;
+    top: -1rem;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    //transform: translate(0px, 0px);
+    opacity: 0;
+  }
+}
+
+.buttonText {
+  color: white;
+  font-size: 1.2rem;
+  opacity: 1;
+}

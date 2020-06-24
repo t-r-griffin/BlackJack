@@ -1,0 +1,29 @@
+html,
+body #app,
+#app > div {
+  font-size: 62.5%;
+  height: 100vh;
+  background-image: radial-gradient(circle, #35654d, #35654d, #35654d);
+}
+
+body {
+  overflow: hidden;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-HIDPI: 1380px;
+$bp-laptoptouch: 81em; //1296px
+
+$bp-largest: 75em; // 1200px
+$bp-ipadpro: 64.5em; // 1032px
+$bp-belowipadpro: 68.73em; // below ipadpro
+$bp-large: 62.5em; // 1000px
+$bp-mediumer: 56.25em; // 900px
+$bp-ipad: 50em; // 800px;
+$bp-small: 43.75em; // 700px;
+$bp-smallest: 600px; // 600px;
+$bp-iphone6: 414px;
+$bp-iphonex: 375px; // 500px;
+$bp-galaxys5: 360px;
+$bp-iphone5: 350px; // 600px;
+$bp-iphone5s: 320px;
