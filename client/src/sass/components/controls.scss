@@ -130,7 +130,7 @@
 
 .item-0 {
   position: relative;
-  //left: 4rem;
+  left: 2rem;
   //background-color: yellow;
   //text-align: center;
   grid-row: 2/2;
@@ -139,7 +139,7 @@
 
 .item-1 {
   //background-color: green;
-  left: 7rem;
+  left: 5rem;
   text-align: center;
   position: relative;
   //left: 35rem;
@@ -148,74 +148,74 @@
 }
 
 .item-2 {
-  left: 1rem;
+  left: 8rem;
   grid-row: 2/2;
-  grid-column: 2/2;
+  grid-column: 1/1;
   position: relative;
   //background-color: purple;
-  text-align: left;
+  text-align: center;
 }
 
 .item-3 {
   grid-row: 2/2;
-  grid-column: 2/2;
+  grid-column: 1/1;
   //background-color: black;
-  text-align: left;
+  text-align: center;
   position: relative;
-  left: 4rem;
+  left: 11rem;
 }
 
 .item-4 {
   grid-row: 2/2;
-  grid-column: 2/2;
+  grid-column: 1/1;
   position: relative;
-  left: 7rem;
+  left: 13rem;
   //background-color: yellow;
-  text-align: left;
+  text-align: center;
 }
 
 .item-5 {
   //background-color: green;
-  text-align: left;
+  text-align: center;
   position: relative;
-  left: 10rem;
+  left: 15rem;
   grid-row: 2/2;
-  grid-column: 2/2;
+  grid-column: 1/1;
 }
 
 .item-6 {
   grid-row: 2/2;
-  grid-column: 2/2;
+  grid-column: 1/1;
   position: relative;
   //background-color: purple;
-  text-align: left;
-  left: 13rem;
+  text-align: center;
+  left: 17rem;
 }
 
 .item-7 {
   grid-row: 2/2;
-  grid-column: 2/2;
+  grid-column: 1/1;
   //background-color: black;
-  text-align: left;
+  text-align: center;
   position: relative;
-  left: 16rem;
+  left: 19rem;
 }
 
 .item-8 {
   grid-row: 2/2;
   grid-column: 1/1;
   position: relative;
-  left: 8rem;
+  left: 21rem;
   //background-color: yellow;
-  text-align: right;
+  text-align: center;
   z-index: -1;
 }
 
 .item-9 {
   //background-color: green;
-  text-align: right;
+  text-align: center;
   position: relative;
-  left: 5rem;
+  left: 23rem;
   grid-row: 2/2;
   grid-column: 1/1;
   z-index: -2;
