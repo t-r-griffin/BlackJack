@@ -4,6 +4,7 @@ body #app,
   font-size: 62.5%;
   height: 100vh;
   background-image: radial-gradient(circle, #35654d, #35654d, #35654d);
+  padding: env(safe-area-inset);
 }
 
 body {
