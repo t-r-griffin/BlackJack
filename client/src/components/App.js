@@ -11,6 +11,10 @@ function App() {
   const [width, setWidth] = React.useState(window.innerWidth);
   const [height, setHeight] = React.useState(window.innerHeight);
 
+  App.ontouchstart = (e) => {
+    e.preventDefault();
+  };
+
   React.useEffect(() => {
     window.addEventListener('resize', isPortrait);
     return () => window.removeEventListener('resize', isPortrait);
