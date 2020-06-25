@@ -11,7 +11,7 @@ function App() {
   const [width, setWidth] = React.useState(window.innerWidth);
   const [height, setHeight] = React.useState(window.innerHeight);
 
-  App.ontouchstart = (e) => {
+  document.ontouchmove = (e) => {
     e.preventDefault();
   };
 
