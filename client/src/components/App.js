@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-
+import { isMobile } from 'react-device-detect';
 import Menu from './Menu';
 import Play from './Play';
 import Settings from './Settings';
 import Rules from './Rules';
+import LandScape from './LandScape';
 
 function App() {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -20,7 +21,9 @@ function App() {
     setHeight(window.innerHeight);
   };
 
-  if (height > width) {
+  if (isMobile && width > height) {
+    return <LandScape />;
+  } else {
     return (
       <BrowserRouter>
         <div className="container">
@@ -31,8 +34,6 @@ function App() {
         </div>
       </BrowserRouter>
     );
-  } else {
-    return <div>Wut</div>;
   }
 }
 
