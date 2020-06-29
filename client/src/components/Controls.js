@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import PlayArea from './PlayArea';
 import back from '../assets/PNG/blue_back.png';
 
@@ -89,7 +89,7 @@ class Controls extends Component {
   render() {
     return (
       <div className="test">
-        <img className="shuffle" src={back} />
+        <img className="shuffle" src={back} alt="" />
         <div className="center">
           <div className="controls">{this.renderContent()}</div>
           <div className="controls">{this.finishButton()}</div>

@@ -1,10 +1,9 @@
-import React, { Fragment, Component } from 'react';
-import wtf from '../assets/PNG/blue_back.png';
+import React, { Component } from 'react';
 import Card from './Card';
 
 class PlayArea extends Component {
   renderScore = (props) => {
-    if (this.props.gameState == 'INPLAY') {
+    if (this.props.gameState === 'INPLAY') {
       return <div className={this.props.className}>{this.props.total}</div>;
     } else {
       return (
@@ -19,9 +18,9 @@ class PlayArea extends Component {
   };
 
   renderContent = (props) => {
-    if (this.props.content && this.props.gameState == 'INPLAY') {
+    if (this.props.content && this.props.gameState === 'INPLAY') {
       return <div className={this.props.content}>IN PLAY</div>;
-    } else if (this.props.content && this.props.gameState == 'STAND') {
+    } else if (this.props.content && this.props.gameState === 'STAND') {
       return (
         <div
           className={this.props.content}
@@ -30,7 +29,7 @@ class PlayArea extends Component {
           STAND
         </div>
       );
-    } else if (this.props.content && this.props.gameState == 'LOSE') {
+    } else if (this.props.content && this.props.gameState === 'LOSE') {
       return (
         <div
           className={this.props.content}
@@ -39,7 +38,7 @@ class PlayArea extends Component {
           LOSE
         </div>
       );
-    } else if (this.props.content && this.props.gameState == 'WIN') {
+    } else if (this.props.content && this.props.gameState === 'WIN') {
       return (
         <div
           className={this.props.content}
@@ -48,7 +47,7 @@ class PlayArea extends Component {
           WIN
         </div>
       );
-    } else if (this.props.content && this.props.gameState == 'BLACKJACK') {
+    } else if (this.props.content && this.props.gameState === 'BLACKJACK') {
       return (
         <div
           className={this.props.content}
@@ -57,7 +56,7 @@ class PlayArea extends Component {
           BLACKJACK
         </div>
       );
-    } else if (this.props.content && this.props.gameState == 'BUST') {
+    } else if (this.props.content && this.props.gameState === 'BUST') {
       return (
         <div
           className={this.props.content}
@@ -66,7 +65,7 @@ class PlayArea extends Component {
           BUST
         </div>
       );
-    } else if (this.props.content && this.props.gameState == 'PUSH') {
+    } else if (this.props.content && this.props.gameState === 'PUSH') {
       return (
         <div
           className={this.props.content}
@@ -81,7 +80,7 @@ class PlayArea extends Component {
   render() {
     return (
       <div className="playgrid">
-        <React.Fragment>{this.renderScore()}</React.Fragment>
+        {this.renderScore()}
         {this.props.cardsGiven.map(function (deck, id) {
           return (
             <div className={`item-${id}`}>
@@ -89,7 +88,7 @@ class PlayArea extends Component {
             </div>
           );
         })}
-        <React.Fragment>{this.renderContent()}</React.Fragment>
+        {this.renderContent()}
       </div>
     );
   }

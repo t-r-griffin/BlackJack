@@ -74,7 +74,7 @@ class Play extends Component {
 
     //if hand's sum is 21 then its the dealer's turn
     setTimeout(() => {
-      if (this.getCardPointsTotal(this.state.userCards) == 21) {
+      if (this.getCardPointsTotal(this.state.userCards) === 21) {
         this.setState({ playerBust: true });
         setTimeout(() => {
           this.endGame();
@@ -143,7 +143,7 @@ class Play extends Component {
     setTimeout(() => this.setState({ buttonDisabled: false }), 2000);
 
     this.setState({ playerBust: true });
-    if (this.state.userCount != 21) {
+    if (this.state.userCount !== 21) {
       this.setState({ gameState: 'STAND' });
       this.dealerHand();
     }
@@ -210,11 +210,11 @@ class Play extends Component {
     } else if (this.state.userCount > 21) {
       gameResult = 'BUST';
     } else if (
-      this.state.userCount == this.state.aiCount &&
+      this.state.userCount === this.state.aiCount &&
       this.state.aiCount >= 17
     ) {
       gameResult = 'PUSH';
-    } else if (this.state.userCount == 21 && this.state.dealerTurn == false) {
+    } else if (this.state.userCount === 21 && this.state.dealerTurn === false) {
       gameResult = 'BLACKJACK';
     } else if (
       (this.state.aiCount <= 21 &&

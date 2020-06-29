@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "web-vitals": "^0.2.3"
   }
 }

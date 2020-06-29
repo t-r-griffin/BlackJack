@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import cards from '../cards.png';
 import Img from './Img';
@@ -13,7 +13,7 @@ const Menu = () => {
         height={204}
         className="menu__card fadeIn"
         src={cards}
-        alt="Cards"
+        alt=""
       />
       <div className="options fadeIn">
         <Link to="/Play" className="btn">
