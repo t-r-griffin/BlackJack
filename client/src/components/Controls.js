@@ -89,10 +89,7 @@ class Controls extends Component {
   render() {
     return (
       <div className="test">
-        <img
-          style={{ position: 'sticky', top: '2rem', left: '100rem' }}
-          src={back}
-        />
+        <img className="shuffle" src={back} />
         <div className="center">
           <div className="controls">{this.renderContent()}</div>
           <div className="controls">{this.finishButton()}</div>
