@@ -14,7 +14,7 @@ const Menu = () => {
     };
   });
   if (!image) {
-    return null;
+    return <div>wtf</div>;
   } else {
     return (
       <div className="menu">
