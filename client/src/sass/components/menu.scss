@@ -10,7 +10,7 @@
   text-align: center;
 
   &__card {
-    margin-top: -7rem;
+    margin-top: -5rem;
     align-self: top;
 
     height: auto;
@@ -88,6 +88,8 @@
 
   //transform: translate(35%, 0%);
   text-align: center;
+  position: relative;
+  top: -5rem;
 }
 
 .image1 {
@@ -126,7 +128,7 @@
 
 .wrapper {
   position: relative;
-  top: -15rem;
+  top: -20rem;
   height: 0;
   padding-top: calc(var(--height) / var(--width) * 100%);
 }
