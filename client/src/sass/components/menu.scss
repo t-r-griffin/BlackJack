@@ -9,95 +9,17 @@
   justify-content: center;
   text-align: center;
 
-  @media only screen and (min-width: 1367px) {
-    //font-size: 6rem;
-  }
-
-  @media only screen and (max-width: 1366px) and (min-width: 1366px) and (max-height: 1024px) and (min-height: 1024px) {
-    //font-size: 6rem;
-  }
-
-  @media only screen and (max-width: 1024px) and (min-width: 1000px) {
-    //font-size: 4rem;
-  }
-
-  @media only screen and (max-width: 1024px) and (min-width: 1024px) and (max-height: 1366px) and (min-height: 1366px) {
-    //font-size: 8rem;
-  }
-
-  @media only screen and (max-width: $bp-ipad) and (min-width: 760px) {
-    //font-size: 4rem;
-  }
-
   &__card {
     margin-top: -7rem;
     align-self: top;
-    //flex-grow: 1;
 
     height: auto;
-
-    @media only screen and (min-width: 1367px) {
-      //margin-top: -10rem;
-      //margin-bottom: 3rem;
-    }
-
-    @media only screen and (max-width: 1366px) and (min-width: 1366px) and (max-height: 1024px) and (min-height: 1024px) {
-      //margin-top: -10rem;
-
-      //margin-bottom: 3rem;
-    }
-
-    @media only screen and (max-width: 1280px) and (min-width: 1280px) {
-      //margin-top: -5rem;
-    }
-
-    @media only screen and (max-width: 1365px) and (min-width: 1033px) {
-      //margin-top: 1rem;
-      //margin-bottom: 1rem;
-    }
-
-    @media only screen and (max-width: 1024px) and (min-width: 1000) {
-      //margin-top: -7rem;
-      //margin-bottom: 1rem;
-    }
-
-    @media only screen and (max-width: 1024px) and (min-width: 1024px) and (max-height: 1366px) and (min-height: 1366px) {
-      //margin-top: -7rem;
-      //margin-bottom: 1rem;
-    }
-
-    @media only screen and (max-width: $bp-ipad) and (min-width: 760px) {
-      //font-size: 6rem;
-      //margin-top: -10rem;
-      //margin-bottom: 1rem;
-    }
   }
 
   .moveInLeft {
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
     width: 100%;
     flex-grow: 2;
-
-    @media only screen and (max-width: 1365px) and (min-width: 1033px) {
-      //margin-bottom: -1rem;
-    }
-
-    @media only screen and (max-width: 1024px) and (min-width: 1000px) {
-      //margin-top: 8rem;
-      //margin-bottom: 4rem;
-    }
-
-    @media only screen and (max-width: $bp-ipad) and (min-width: 760px) {
-      //margin-top: 12rem;
-      //margin-bottom: 12rem;
-    }
   }
-}
-
-.fadeIn {
-  animation: fadeIn ease 4s;
 }
 
 .fadeOut {
@@ -111,16 +33,11 @@
   margin-top: 3rem;
   border-radius: 10rem;
   cursor: pointer;
-  transition: all 0.2s;
+
   padding: 0 10rem;
   background-image: url(../../wood.png);
   background-position: center;
   color: $color-gold;
-
-  /*@media only screen and (min-width: 1367px) {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-  }
 
   @media only screen and (max-width: 1366px) and (min-width: 1366px) and (max-height: 1024px) and (min-height: 1024px) {
     font-size: 2rem;
@@ -150,8 +67,6 @@
     height: 5rem;
     padding-top: 1rem;
   }
-  */
-
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -173,22 +88,9 @@
 
   //transform: translate(35%, 0%);
   text-align: center;
-
-  /*@media only screen and (max-width: 1365px) and (min-width: 1033px) {
-    margin-top: -2rem;
-  }
-
-  @media only screen and (max-width: $bp-ipad) and (min-width: 760px) {
-    margin-top: 1rem;
-  }
-
-  @media only screen and (max-width: 1024px) and (min-width: 1000px) {
-    margin-top: 4rem;
-  }*/
 }
 
 .image1 {
-  //width: 20%;
   z-index: 2;
 }
 
@@ -196,7 +98,7 @@
   position: relative;
   left: -7.5rem;
   opacity: 0;
-  //width: 20%;
+
   z-index: 1;
 }
 
@@ -204,7 +106,6 @@
   position: sticky;
   top: 2rem;
   left: 100rem;
-  //width: 8%;
 
   @media only screen and (max-width: 999px) {
     left: 77rem;
@@ -212,7 +113,6 @@
 }
 
 .button:disabled {
-  //visibility: hidden;
   color: white !important;
   visibility: hidden;
   background-color: #f44336 !important;
