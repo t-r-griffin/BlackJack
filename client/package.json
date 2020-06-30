@@ -22,7 +22,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-sw": "node ./src/sw-build.js",
+    "clean-cra-sw": "rimraf build/precache-manifest.*.js && rimraf build/service-worker.js",
+    "build": "react-scripts build && npm run build-sw && npm run clean-cra-sw",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,6 +45,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
-    "web-vitals": "^0.2.3"
+    "rimraf": "^3.0.2",
+    "web-vitals": "^0.2.3",
+    "workbox-build": "^5.1.3"
   }
 }
