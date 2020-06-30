@@ -9,7 +9,7 @@ app.use(express.static('client/build'));
 const path = require('path');
 
 app.get('/serviceWorker.js', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'service-worker.js'));
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'sw.js'));
 });
 
 app.get('*', (req, res) => {
