@@ -20,6 +20,7 @@
     "body-parser": "^1.17.2",
     "concurrently": "^3.5.0",
     "express": "^4.15.3",
+    "express-sslify": "^1.2.0",
     "nodemon": "^1.11.0",
     "path-parser": "^2.0.2"
   }

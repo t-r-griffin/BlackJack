@@ -1,7 +1,10 @@
 const express = require('express');
+const http = require('http');
+const enforce = require('express-sslify');
 
 const app = express();
 
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(express.static('client/build'));
 
 // Express will serve up the index.html file
@@ -17,4 +20,4 @@ app.get('*', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+http.createServer(app).listen(PORT);

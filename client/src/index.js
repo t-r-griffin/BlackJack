@@ -1,7 +1,6 @@
 import 'materialize-css/dist/css/materialize.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HttpsRedirect from 'react-https-redirect';
 
 import App from './components/App';
 
