@@ -1,8 +1,14 @@
 const express = require('express');
 const http = require('http');
 const enforce = require('express-sslify');
+const fs = require('fs');
+
+const key = fs.readFileSync('./key.pem');
+const cert = fs.readFileSync('./cert.pem');
 
 const app = express();
+
+const server = http.createServer({ key: key, cert: cert }, app);
 
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
@@ -20,5 +26,5 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 
-const PORT = process.env.PORT || 5000;
-http.createServer(app).listen(PORT);
+const PORT = process.env.PORT || 3001;
+server.listen(PORT);
