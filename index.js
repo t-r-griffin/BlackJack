@@ -3,8 +3,8 @@ const http = require('http');
 const enforce = require('express-sslify');
 const fs = require('fs');
 
-const key = fs.readFileSync('./config/key.pem');
-const cert = fs.readFileSync('./config/cert.pem');
+const key = fs.readFileSync('./config/keys.js');
+const cert = fs.readFileSync('./config/keys.js');
 
 const app = express();
 
