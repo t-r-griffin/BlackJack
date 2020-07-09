@@ -18,6 +18,41 @@ class Play extends Component {
     buttonDisabled: true,
   };
 
+  playerWins = () => {
+    if (this.state.userCount <= 21 && this.state.aiCount > 21) {
+      return true;
+    } else if (
+      this.state.aiCount >= 17 &&
+      this.state.userCount <= 21 &&
+      this.state.userCount > this.state.aiCount
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  blackJack = () => {
+    return this.state.userCount === 21 && this.state.dealerTurn === false;
+  };
+
+  tieGame = () => {
+    return (
+      this.state.userCount === this.state.aiCount && this.state.aiCount >= 17
+    );
+  };
+
+  dealerWins = () => {
+    return (
+      (this.state.aiCount <= 21 &&
+        this.state.userCount >= 17 &&
+        this.state.aiCount > this.state.userCount) ||
+      (this.state.aiCount >= 17 &&
+        this.state.aiCount <= 21 &&
+        this.state.aiCount > this.state.userCount)
+    );
+  };
+
   startGame = () => {
     this.setState({
       playerBust: false,
@@ -67,7 +102,7 @@ class Play extends Component {
     }, 2000);
 
     setTimeout(() => {
-      const hand = this.state.aiCards;
+      const hand = [...this.state.aiCards];
       hand.push(deck[0]);
       this.setState({ aiCards: hand });
     }, 3000);
@@ -121,17 +156,17 @@ class Play extends Component {
     hand.pop(); //uncover the card by removing the cover card
 
     //Add card to the dealer hand as long as the sum of the dealer's is less than or equal to 17
-    this.pleaseWork();
+    this.drawCard();
   };
 
-  pleaseWork = () => {
+  drawCard = () => {
     let currentCount = this.state.aiCount;
     this.dealACard(this.state.aiCards); //Deal a card to user
     //Update Ai's total points
     this.setState({ aiCount: this.getCardPointsTotal(this.state.aiCards) });
     currentCount = this.getCardPointsTotal(this.state.aiCards);
     if (currentCount < 17) {
-      setTimeout(this.pleaseWork, 2000);
+      setTimeout(this.drawCard, 2000);
     } else if (currentCount >= 17) {
       setTimeout(this.endGame, 2000);
     }
@@ -158,11 +193,11 @@ class Play extends Component {
     let cardNumber = this.randomCard();
 
     //check if card has been played already
-    if (deck[cardNumber].played) {
+    if (deck[cardNumber].isPlayed) {
       cardNumber = this.randomCard();
-      deck[cardNumber].played = true;
+      deck[cardNumber].isPlayed = true;
     } else {
-      deck[cardNumber].played = true;
+      deck[cardNumber].isPlayed = true;
     }
     playerHand.push(deck[cardNumber]);
     this.setState({ playerCards: playerHand });
@@ -173,14 +208,14 @@ class Play extends Component {
     let total = 0;
     let foundAces = 0;
 
-    for (var i = 0; i < deck.length; i++) {
-      if (deck[i].value === 11) {
+    deck.forEach((card) => {
+      if (card.value === 11) {
         //if the value is a 11 track it but don't add
         foundAces++;
       } else {
-        total += deck[i].value; //add the value to the total
+        total += card.value; //add the value to the total
       }
-    }
+    });
 
     if (foundAces > 0) {
       //if the number of Aces is more than 0
@@ -200,30 +235,15 @@ class Play extends Component {
 
   endGame = () => {
     let gameResult = 'STAND';
-    if (
-      (this.state.userCount <= 21 && this.state.aiCount > 21) ||
-      (this.state.aiCount >= 17 &&
-        this.state.userCount <= 21 &&
-        this.state.userCount > this.state.aiCount)
-    ) {
+    if (this.playerWins()) {
       gameResult = 'WIN'; //return that the player won
     } else if (this.state.userCount > 21) {
       gameResult = 'BUST';
-    } else if (
-      this.state.userCount === this.state.aiCount &&
-      this.state.aiCount >= 17
-    ) {
+    } else if (this.tieGame()) {
       gameResult = 'PUSH';
-    } else if (this.state.userCount === 21 && this.state.dealerTurn === false) {
+    } else if (this.blackJack()) {
       gameResult = 'BLACKJACK';
-    } else if (
-      (this.state.aiCount <= 21 &&
-        this.state.userCount >= 17 &&
-        this.state.aiCount > this.state.userCount) ||
-      (this.state.aiCount >= 17 &&
-        this.state.aiCount <= 21 &&
-        this.state.aiCount > this.state.userCount)
-    ) {
+    } else if (this.dealerWins()) {
       gameResult = 'LOSE'; //return that the player lost
     }
 

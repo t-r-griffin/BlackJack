@@ -6,9 +6,6 @@ import App from './components/App';
 
 import './sass/main.scss';
 
-// Measure and log the current FCP value,
-// any time it's ready to be reported.
-
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/sw.js')

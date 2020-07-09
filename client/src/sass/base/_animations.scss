@@ -7,9 +7,10 @@
   }
 }
 
-@keyframes seconds {
+@keyframes fadeOut {
   0% {
     opacity: 1;
+    color: white;
   }
   100% {
     opacity: 0;
@@ -31,13 +32,6 @@
 
 .instant {
   animation: appear 4s linear;
-}
-.cardStyle {
-  animation: dealing 0.75s linear;
-}
-
-.cardStyle2 {
-  animation: dealing2 0.75s linear;
 }
 
 .fadeIn2 {
@@ -63,7 +57,7 @@
 }
 
 /*animate the cards from left to ending position while spinning*/
-@keyframes dealing {
+@keyframes dealUp {
   0% {
     transform: translate(35rem, 0px);
     opacity: 0;
@@ -82,7 +76,7 @@
   }
 }
 
-@keyframes dealing2 {
+@keyframes dealDown {
   0% {
     transform: translate(35rem, -1rem);
     opacity: 1;
@@ -98,10 +92,4 @@
   100% {
     opacity: 0;
   }
-}
-
-.buttonText {
-  color: white;
-  font-size: 1.2rem;
-  opacity: 1;
 }

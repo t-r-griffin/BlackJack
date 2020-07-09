@@ -30,31 +30,13 @@ function App() {
   } else {
     return (
       <BrowserRouter>
-        <div className="container">
-          <Route exact path="/" component={Menu} />
-          <Route exact path="/Play" component={Play} />
-          <Route exact path="/Rules" component={Rules} />
-          <Route exact path="/Settings" component={Settings} />
-        </div>
+        <Route exact path="/" component={Menu} />
+        <Route exact path="/Play" component={Play} />
+        <Route exact path="/Rules" component={Rules} />
+        <Route exact path="/Settings" component={Settings} />
       </BrowserRouter>
     );
   }
 }
 
 export default App;
-
-/*render() {
-  
-      return (
-        <BrowserRouter>
-          <div className="container">
-            <Route exact path="/" component={Menu} />
-            <Route exact path="/Play" component={Play} />
-            <Route exact path="/Rules" component={Rules} />
-            <Route exact path="/Settings" component={Settings} />
-          </div>
-        </BrowserRouter>
-      );
-    }
-  }
-}*/

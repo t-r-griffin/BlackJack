@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import PlayArea from './PlayArea';
+import Deal from './Deal';
 import back from '../assets/PNG/blue_back.png';
 
 class Controls extends Component {
-  finishButton = () => {
+  //Render redeal button if game is finished.
+  redeal = () => {
     if (this.props.gameFinished) {
       return (
         <div>
           <button
             onClick={this.props.startGame}
-            className="please btn-floating btn-large red"
+            className="redeal btn-floating btn-large red"
           >
             ReDeal
           </button>
@@ -18,11 +19,12 @@ class Controls extends Component {
     }
   };
 
+  //render hit and stand buttons if the player has not gone bust.
   renderButtons = () => {
     if (!this.props.playerBust) {
       return (
         <div className="button-container">
-          <p className="buttonText fadeOut">Goodluck!</p>
+          <p className="buttonText__goodLuck">Goodluck!</p>
           <button
             onClick={this.props.hit}
             disabled={this.props.buttonDisabled}
@@ -43,12 +45,12 @@ class Controls extends Component {
     return;
   };
 
-  renderContent(props) {
+  renderContent() {
     let content;
     if (this.props.gameStarted) {
       content = (
         <React.Fragment>
-          <PlayArea
+          <Deal
             className="dealerScore instant"
             gameState={this.props.gameState}
             hit={this.props.hit}
@@ -57,7 +59,7 @@ class Controls extends Component {
             userCards={this.props.userCards}
             total={this.props.aiCount}
           />
-          <PlayArea
+          <Deal
             className="playerScore instant"
             content="content instant"
             gameState={this.props.gameState}
@@ -88,11 +90,11 @@ class Controls extends Component {
 
   render() {
     return (
-      <div className="test">
+      <div>
         <img className="shuffle" src={back} alt="" />
         <div className="center">
           <div className="controls">{this.renderContent()}</div>
-          <div className="controls">{this.finishButton()}</div>
+          <div className="controls">{this.redeal()}</div>
         </div>
       </div>
     );

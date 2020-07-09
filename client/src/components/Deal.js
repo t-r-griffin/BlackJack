@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import Cards from './Cards';
 
-class PlayArea extends Component {
+class Deal extends Component {
   renderScore = (props) => {
     if (this.props.gameState === 'INPLAY') {
       return <div className={this.props.className}>{this.props.total}</div>;
@@ -84,7 +84,7 @@ class PlayArea extends Component {
         {this.props.cardsGiven.map(function (deck, id) {
           return (
             <div className={`item-${id}`}>
-              <Card key={id} cardValue={deck.src} />
+              <Cards key={id} cardValue={deck.src} />
             </div>
           );
         })}
@@ -94,4 +94,4 @@ class PlayArea extends Component {
   }
 }
 
-export default PlayArea;
+export default Deal;

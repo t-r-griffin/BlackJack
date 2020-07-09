@@ -32,9 +32,16 @@
 
       margin-top: 0rem;
     }
+
+    @media only screen and (max-width: 374px) {
+      position: relative;
+      width: 14rem;
+      height: 14rem;
+      top: 10rem;
+    }
   }
 
-  .moveInLeft {
+  .heading {
     width: 100%;
     flex-grow: 2;
 
@@ -48,11 +55,31 @@
       font-size: 17rem;
       margin-bottom: -15rem;
     }
+
+    @media only screen and (max-width: 374px) {
+      position: relative;
+      font-size: 6rem;
+      top: 2rem;
+    }
   }
 }
 
-.fadeOut {
-  animation: seconds forwards 3s;
+.options {
+  display: flex;
+  flex-grow: 4;
+  flex-direction: column;
+
+  text-align: center;
+  position: relative;
+  top: -5rem;
+
+  @media only screen and (max-width: $bp-ipad) and (min-width: $bp-ipad) and (max-height: 1024px) and (min-height: 1024px) {
+    top: 14rem;
+  }
+
+  @media only screen and (max-width: $bp-ipadpro) and (min-width: 1024px) and (max-height: 1366px) and (min-height: 1366px) {
+    top: 25rem;
+  }
 }
 
 .btn {
@@ -85,13 +112,6 @@
     height: 4rem;
   }
 
-  @media only screen and (max-width: 1024px) and (min-width: 1000px) {
-    margin-bottom: 3rem;
-    font-size: 1.5rem;
-    height: 3rem;
-    padding-bottom: 3rem;
-  }
-
   @media only screen and (max-width: 1024px) and (min-width: 1024px) and (max-height: 1366px) and (min-height: 1366px) {
     margin-bottom: 5rem;
     font-size: 3rem;
@@ -99,6 +119,15 @@
     padding-top: 1rem;
     width: 50rem;
   }
+
+  @media only screen and (max-width: 374px) {
+    top: 5rem;
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 20rem;
+    padding: 0;
+  }
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -111,73 +140,4 @@
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
-}
-
-.options {
-  display: flex;
-  flex-grow: 4;
-  flex-direction: column;
-
-  //transform: translate(35%, 0%);
-  text-align: center;
-  position: relative;
-  top: -5rem;
-
-  @media only screen and (max-width: $bp-ipad) and (min-width: $bp-ipad) and (max-height: 1024px) and (min-height: 1024px) {
-    top: 14rem;
-  }
-
-  @media only screen and (max-width: $bp-ipadpro) and (min-width: 1024px) and (max-height: 1366px) and (min-height: 1366px) {
-    top: 25rem;
-  }
-}
-
-.image1 {
-  z-index: 2;
-}
-
-.image2 {
-  position: relative;
-  left: -7.5rem;
-  opacity: 0;
-
-  z-index: 1;
-}
-
-.shuffle {
-  position: sticky;
-  top: 2rem;
-  left: 100rem;
-  height: 109px;
-  width: 71px;
-
-  @media only screen and (max-width: 999px) {
-    left: 77rem;
-  }
-}
-
-.button:disabled {
-  color: white !important;
-  visibility: hidden;
-  background-color: #f44336 !important;
-}
-
-.root {
-  max-width: calc(var(--maxWidth) * 1px);
-}
-
-.wrapper {
-  position: relative;
-  top: -20rem;
-  height: 0;
-  padding-top: calc(var(--height) / var(--width) * 100%);
-}
-
-.img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
 }

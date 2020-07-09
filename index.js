@@ -8,7 +8,7 @@ const cert = fs.readFileSync('./config/keys.js');
 
 const app = express();
 
-const server = http.createServer({ key: key, cert: cert }, app);
+const server = http.createServer({ key, cert }, app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(enforce.HTTPS({ trustProtoHeader: true }));
@@ -16,8 +16,6 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(express.static('client/build'));
 
-// Express will serve up the index.html file
-// if it doesn't recognize the route
 const path = require('path');
 
 app.get('/serviceWorker.js', (req, res) => {
