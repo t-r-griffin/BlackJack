@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Controls from './Controls';
+import Navigation from './Navigation';
 import { deck } from '../utils/deck';
 
 class Play extends Component {
@@ -260,6 +261,7 @@ class Play extends Component {
   render() {
     return (
       <div>
+        <Navigation />
         <Controls
           playerBust={this.state.playerBust}
           gameStarted={this.state.gameStarted}

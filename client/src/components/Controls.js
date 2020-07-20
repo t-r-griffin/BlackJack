@@ -91,7 +91,6 @@ class Controls extends Component {
   render() {
     return (
       <div>
-        <img className="shuffle" src={back} alt="" />
         <div className="center">
           <div className="controls">{this.renderContent()}</div>
           <div className="controls">{this.redeal()}</div>
