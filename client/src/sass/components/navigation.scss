@@ -9,22 +9,19 @@
     width: 7rem;
     position: fixed;
     top: 6rem;
-    left: 4rem;
+    left: 6rem;
     border-radius: 10%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(black, 0.1);
     text-align: center;
     cursor: pointer;
 
-    /*@include respond(tab-port) {
-      top: 4rem;
-      right: 4rem;
+    @media only screen and (max-width: $bp-small) {
+      height: 3rem;
+      width: 3rem;
+      top: 2rem;
+      left: 2rem;
     }
-
-    @include respond(phone) {
-      top: 3rem;
-      right: 3rem;
-    }*/
   }
 
   &__background {
@@ -32,21 +29,16 @@
     width: 6rem;
     border-radius: 10%;
     position: fixed;
-    top: 6.5rem;
-    left: 6.5rem;
+    top: 0rem;
+    left: 0rem;
     background-image: radial-gradient(#35654d, #35654d, #35654d);
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
-    /*@include respond(tab-port) {
-      top: 4.5rem;
-      right: 4.5rem;
+    @media only screen and (max-width: $bp-small) {
+      height: 3rem;
+      width: 3rem;
     }
-
-    @include respond(phone) {
-      top: 3.5rem;
-      right: 3.5rem;
-    }*/
   }
 
   &__nav {
@@ -132,6 +124,12 @@
       height: 2px;
       background-color: white;
       display: inline-block;
+
+      @media only screen and (max-width: $bp-small) {
+        width: 2rem;
+        height: 2px;
+        top: -2rem;
+      }
     }
 
     &::before,
