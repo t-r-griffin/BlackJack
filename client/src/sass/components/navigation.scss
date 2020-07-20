@@ -43,9 +43,10 @@
 
   &__nav {
     height: 100vh;
+
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0rem;
     z-index: 1500;
     background-image: radial-gradient(#35654d, #35654d, #35654d);
     opacity: 0;
@@ -58,11 +59,11 @@
     flex-direction: column;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 65%;
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
-    width: 100%;
+    width: 190%;
 
     @media only screen and (max-width: $bp-small) {
       top: 40%;
@@ -76,7 +77,9 @@
   &__link {
     &:link,
     &:visited {
+      position: relative;
       display: inline-block;
+      left: -20rem;
       font-size: 3rem;
       font-family: hermann;
       font-weight: 300;

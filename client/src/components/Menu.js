@@ -14,10 +14,10 @@ const Menu = () => {
         <Link to="/Play" className="btn">
           Play
         </Link>
-        <Link to="/Rules" className="btn">
+        <Link to="#" className="btn">
           Rules
         </Link>
-        <Link to="/Settings" className="btn">
+        <Link to="#" className="btn">
           Settings
         </Link>
       </div>
