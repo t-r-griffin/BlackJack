@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   return (
@@ -18,9 +19,9 @@ export default function Navigation() {
       <nav className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <Link to="/" className="navigation__link">
               Menu
-            </a>
+            </Link>
           </li>
           <li className="navigation__item">
             <a href="#" className="navigation__link">
